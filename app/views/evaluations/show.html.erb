@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User evaluator:</strong>
+  <%= @evaluation.user_evaluator %>
+</p>
+
+<p>
+  <strong>User evaluated:</strong>
+  <%= @evaluation.user_evaluated %>
+</p>
+
+<p>
+  <strong>Rating:</strong>
+  <%= @evaluation.rating %>
+</p>
+
+<%= link_to 'Edit', edit_evaluation_path(@evaluation) %> |
+<%= link_to 'Back', evaluations_path %>

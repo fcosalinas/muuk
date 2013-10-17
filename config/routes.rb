@@ -1,4 +1,24 @@
 Muuk::Application.routes.draw do
+  resources :subcategories
+
+  resources :categories
+
+  resources :interests
+
+  resources :evaluations
+
+  resources :tags
+
+  resources :albums
+
+  resources :subscriptions
+
+  resources :sales
+
+  resources :products
+
+  resources :users
+
   resources :messages
 
   # The priority is based upon order of creation: first created -> highest priority.

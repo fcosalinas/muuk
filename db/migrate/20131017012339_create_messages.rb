@@ -1,8 +1,8 @@
 class CreateMessages < ActiveRecord::Migration
   def change
     create_table :messages do |t|
-      t.references :senderUser, index: true
-      t.references :recieverUser, index: true
+      t.references :sender_user, index: true
+      t.references :reciever_user, index: true
       t.string :content
 
       t.timestamps
