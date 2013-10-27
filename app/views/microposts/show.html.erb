@@ -7,7 +7,7 @@
 
 <p>
   <strong>User:</strong>
-  <%= @micropost.user_id %>
+  <%= User.find_by_id(@micropost.user_id).full_name %>
 </p>
 
 <%= link_to 'Edit', edit_micropost_path(@micropost) %> |
