@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131017233107) do
+ActiveRecord::Schema.define(version: 20131027194303) do
 
   create_table "albums", force: true do |t|
     t.integer  "product_id"
@@ -58,6 +58,13 @@ ActiveRecord::Schema.define(version: 20131017233107) do
 
   add_index "messages", ["recieverUser_id"], name: "index_messages_on_recieverUser_id"
   add_index "messages", ["senderUser_id"], name: "index_messages_on_senderUser_id"
+
+  create_table "microposts", force: true do |t|
+    t.string   "content"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "product_categories", force: true do |t|
     t.integer  "product_id"
