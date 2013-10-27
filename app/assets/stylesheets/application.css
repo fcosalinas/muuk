@@ -11,3 +11,29 @@
  *= require_self
  *= require_tree .
  */
+
+#logo_home{
+	width: 40%;
+	height: auto;
+	float:left;
+}
+
+
+#foot_bar_home{
+	width: 100%;
+	height: auto;
+	position:absolute;
+	bottom:0px;
+	left:0px;
+}
+
+#new_user{
+	padding-right: 20%;
+	padding-left: 40px;
+	float:right;
+}
+
+#info_home{		
+	width: 100%;
+	height: auto;
+}

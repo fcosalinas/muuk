@@ -1,8 +1,49 @@
-
 <% provide(:title, 'Inicio') %>
 <!DOCTYPE html>
 <html>
   <body>
-    <h1>Inicio</h1>
+    <div>
+      <%= image_tag "pagina1.jpg", :alt => "Logo",:id => 'logo_home'  %>
+      <% @user = User.new %>
+      <%= form_for(@user) do |f| %>
+      <% if @user.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+          <ul>
+          <% @user.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+          </ul>
+        </div>
+      <% end %>
+
+      <div class="field">
+        <%= f.label :first_name %><br>
+        <%= f.text_field :first_name %>
+      </div>
+      <div class="field">
+        <%= f.label :last_name %><br>
+        <%= f.text_field :last_name %>
+      </div>
+      <div class="field">
+        <%= f.label :email %><br>
+        <%= f.text_field :email %>
+      </div>
+      <div class="field">
+        <%= f.label :birth_date %><br>
+        <%= f.date_select :birth_date %>
+      </div>
+      <div class="actions">
+        <%= f.submit "Registrarse" %>
+      </div>
+    <% end %>
+    </div>
+    <div id="info">      
+      <%= image_tag "barra_info.jpg", :alt => "Info", :id => 'info_home',  :class => 'image_info' %>
+    </div>
+    <div>
+      <%= image_tag "pagina6.jpg", :alt => "Foot",:id => 'foot_bar_home'  %>
+    </div>
   </body>
 </html>
